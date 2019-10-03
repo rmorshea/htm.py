@@ -13,7 +13,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/jviide/htm.py",
     packages=setuptools.find_packages(),
-    install_requires=["tagged"],
+    install_requires=["tagged>=0.0.2"],
+    extras_require = {
+        "compile": ["astor>=0.8.0"]
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

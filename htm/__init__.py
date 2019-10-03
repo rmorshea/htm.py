@@ -257,6 +257,8 @@ def htm(func=None, *, cache_maxsize=128):
         def __htm(strings, values):
             ops = cached_parse(strings)
             return htm_eval(h, ops, values)
+
+        __htm._eval = functools.partial(htm_eval, h)
         return __htm
 
     if func is not None:
