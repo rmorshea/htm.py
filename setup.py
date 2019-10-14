@@ -14,6 +14,7 @@ setuptools.setup(
     url="https://github.com/jviide/htm.py",
     packages=setuptools.find_packages(),
     install_requires=["tagged"],
+    extras_require={"dialect": ["pyalect"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
